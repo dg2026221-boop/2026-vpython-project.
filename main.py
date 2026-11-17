@@ -33,13 +33,13 @@ brush = compound([body, head])
 while True :
     rate(100)
     k = keysdown()
-    if 'right' in k: 
+    if 'right' in k and brush.pos.x < 4 : 
         brush.pos.x = brush.pos.x + 1
-    if 'left' in k: 
+    if 'left' in k and brush.pos.x > -7 : 
         brush.pos.x = brush.pos.x - 1
-    if 'up' in k: 
+    if 'up' in k and brush.pos.y < 1 :
         brush.pos.y = brush.pos.y + 1
-    if 'down' in k: 
+    if 'down' in k and brush.pos.y > -7 : 
         brush.pos.y = brush.pos.y - 1
         teeth1.color = teeth1.color + vec(0.01,0.01,0.01)
         teeth2.color = teeth2.color + vec(0.01,0.01,0.01)
